@@ -1,0 +1,154 @@
+﻿@model DataObjects.Vehicle
+
+<div>
+    <h4>Vehicle Details</h4>
+    <hr />
+    <div class="container">
+        
+        <div class="row">
+
+            <div class="col-md-5">
+
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Make)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Make)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Model)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Model)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.SubModel)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.SubModel)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Year)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Year)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Cost)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Cost)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ServiceCost)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ServiceCost)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Mileage)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Mileage)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Vin)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Vin)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BodyStyle)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.BodyStyle)
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="col-md-5">
+                <dl>
+                    <dt>
+                        Engine Size
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.EngineSize
+                    </dd>
+
+                    <dt>
+                        Cylinder Count
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.CylinderCount
+                    </dd>
+
+                    <dt>
+                        Transmission
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.Transmission
+                    </dd>
+
+                    <dt>
+                        DriveLine
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.DriveLine
+                    </dd>
+
+                    <dt>
+                        Interior Material
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.InteriorMaterial
+                    </dd>
+
+                    <dt>
+                        Interior Color
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.InteriorColor
+                    </dd>
+
+                    <dt>
+                        Exterior Color
+                    </dt>
+
+                    <dd>
+                        @ViewBag.Options.ExteriorColor
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.VehicleID }) |
+            @Html.ActionLink("Back to List", "VehicleList")
+        </p>

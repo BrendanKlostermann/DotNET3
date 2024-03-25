@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DataObjects.Vehicle>
+
+@{
+    ViewBag.Title = "VehicleList";
+}
+
+    <h2>Available Vehicles</h2>
+
+    <p>
+        @Html.ActionLink("Add New Vehicle", "AddVehicle")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mileage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BodyStyle)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Make)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mileage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BodyStyle)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateVehicle", new { id = item.VehicleID }) |
+                    @Html.ActionLink("Details", "DetailsVehicle", new { id = item.VehicleID }) |
+                    @Html.ActionLink("Delete", "DeleteVehicle", new { id = item.VehicleID })
+                </td>
+            </tr>
+        }
+    </table>

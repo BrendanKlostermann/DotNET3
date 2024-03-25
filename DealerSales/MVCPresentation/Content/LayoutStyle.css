@@ -1,0 +1,17 @@
+﻿.bgBlack{
+    background-color: black;
+}
+
+.bgLightGray{
+    background-color: lightgray;
+}
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+

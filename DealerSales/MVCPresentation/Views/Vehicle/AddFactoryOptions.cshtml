@@ -1,0 +1,94 @@
+﻿@model DataObjects.VehicleViewModel
+
+@{
+    ViewBag.Title = "AddFactoryOptions";
+}
+
+<h2>Factory Options</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>VehicleViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.HiddenFor(model => model.Vehicle.VehicleID)
+        @Html.HiddenFor(model => model.Vehicle.Make)
+        @Html.HiddenFor(model => model.Vehicle.Model)
+        @Html.HiddenFor(model => model.Vehicle.SubModel)
+        @Html.HiddenFor(model => model.Vehicle.BodyStyle)
+        @Html.HiddenFor(model => model.Vehicle.Mileage)
+        @Html.HiddenFor(model => model.Vehicle.Cost)
+        @Html.HiddenFor(model => model.Vehicle.ServiceCost)
+        @Html.HiddenFor(model => model.Vehicle.Vin)
+        @Html.HiddenFor(model => model.Vehicle.Year)
+        @Html.HiddenFor(model => model.Vehicle.Available)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.EngineSize, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.EngineSize, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.EngineSize, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.CylinderCount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.CylinderCount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.CylinderCount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.Transmission, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.Transmission, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.Transmission, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.DriveLine, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.DriveLine, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.DriveLine, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.InteriorMaterial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.InteriorMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.InteriorMaterial, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.InteriorColor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.InteriorColor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.InteriorColor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FactoryOptions.ExteriorColor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FactoryOptions.ExteriorColor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FactoryOptions.ExteriorColor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "VehicleList")
+</div>

@@ -1,0 +1,35 @@
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*/bin
+*/obj
+
+# Ignore NuGet packages
+packages/
+
+# Ignore node_modules for front-end dependencies
+node_modules/
+
+# Ignore user-specific files and settings
+*.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.cache
+*.userprefs
